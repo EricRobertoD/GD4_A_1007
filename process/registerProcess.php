@@ -13,7 +13,14 @@
         $phonenum = $_POST['phonenum'];
         $membership = $_POST['membership'];
 
-        // Melakukan insert ke databse dengan query dibawah ini
+        $select = mysqli_query($con, "SELECT * FROM users WHERE phonenum = '".$_POST['phonenum']."'");
+        if(mysqli_num_rows($select)){
+            echo
+            '<script>
+                alert("Phone Number Harus Unik");
+                window.history.back();
+            </script>';
+        } else{
         $query = mysqli_query($con, "INSERT INTO users(email, password, name, phonenum, membership) VALUES('$email', '$password', '$name', '$phonenum', '$membership')")
             or die(mysqli_error($con)); 
         
@@ -31,10 +38,13 @@
                     alert("Register Failed");
                 </script>';
             }
+        }
     }else{
         echo
             '<script>
                 window.history.back()
             </script>';
     }
+
+        
 ?>

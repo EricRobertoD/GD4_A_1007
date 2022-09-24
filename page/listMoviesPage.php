@@ -12,7 +12,7 @@
                 <th scope="col">No</th>
                 <th scope="col">Name</th>
                 <th scope="col">Genre</th>
-                <th scope="col">Realese</th>
+                <th scope="col">Release</th>
                 <th scope="col">Season</th>
                 <th scope="col"></th>
             </tr>
@@ -34,6 +34,8 @@
                         <td>'.$data['realese'].'</td>
                         <td>'.$data['season'].'</td>
                         <td>
+                        <a href="../page/editMoviePage.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to edit this data?\')"> 
+                        <i style="color: blue" class="fa fa-pencil fa-2x"></i></a>
                         <a href="../process/deleteMovieProcess.php?id='.$data['id'].'"onClick="return confirm ( \'Are you sure want to delete this data?\')">
                         <i style="color: red" class="fa fa-trash fa-2x"></i></a>
                         </td>
@@ -42,6 +44,7 @@
                 }
             }
         ?>
+
         </tbody>
     </table>
 </div>
