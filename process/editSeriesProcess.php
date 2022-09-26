@@ -5,7 +5,7 @@
         $id = $_POST['id'];
         $name = $_POST['name'];
         $genre = $_POST['genre'];
-        $realese = $_POST['release'];
+        $realease = $_POST['release'];
         $episode = $_POST['episode'];
         $season = $_POST['season'];
         $synopsis = $_POST['synopsis'];
@@ -22,7 +22,7 @@
               }
         }
 
-        if(empty($name) OR empty($genre) OR empty($realese) OR empty($episode) OR empty($season) OR empty($synopsis)){
+        if(empty($name) OR empty($genre) OR empty($realease) OR empty($episode) OR empty($season) OR empty($synopsis)){
             
             echo
                 '<script>
@@ -31,7 +31,7 @@
                 </script>';
         }else{
             
-            $update = mysqli_query($con, "UPDATE `series` SET `name`='$name',`genre`='$strgenre',`realese`='$realese',`episode`='$episode',`season`='$season', `synopsis` = '$synopsis' WHERE id='$id'") or die(mysqli_error($con)); 
+            $update = mysqli_query($con, "UPDATE `series` SET `name`='$name',`genre`='$strgenre',`realease`='$realease',`episode`='$episode',`season`='$season', `synopsis` = '$synopsis' WHERE id='$id'") or die(mysqli_error($con)); 
         
             if($update){
                 echo

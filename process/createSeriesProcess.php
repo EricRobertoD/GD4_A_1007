@@ -4,12 +4,12 @@
 
         $name = $_POST['name'];
         $genre = $_POST['genre'];
-        $realese = $_POST['release'];
+        $realease = $_POST['release'];
         $episode = $_POST['episode'];
         $season = $_POST['season'];
         $synopsis = $_POST['synopsis'];
 
-        if(empty($name) OR empty($genre) OR empty($realese) OR empty($episode) OR empty($season) OR empty($synopsis)){
+        if(empty($name) OR empty($genre) OR empty($realease) OR empty($episode) OR empty($season) OR empty($synopsis)){
             
             echo
                 '<script>
@@ -29,7 +29,7 @@
                     $strgenre .= ", ";
                   }
             }
-            $query = mysqli_query($con, "INSERT INTO series(name, genre, realese, episode, season, synopsis) VALUES('$name', '$strgenre', '$realese', '$episode', '$season', '$synopsis')") or die(mysqli_error($con)); 
+            $query = mysqli_query($con, "INSERT INTO series(name, genre, realease, episode, season, synopsis) VALUES('$name', '$strgenre', '$realease', '$episode', '$season', '$synopsis')") or die(mysqli_error($con)); 
         
             if($query){
                 echo

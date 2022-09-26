@@ -34,7 +34,7 @@
                         <th scope="row">'.$no.'</th>
                         <td>'.$data['name'].'</td>
                         <td>'.$data['genre'].'</td>
-                        <td>'.$data['realese'].'</td>
+                        <td>'.$data['realease'].'</td>
                         <td>'.$data['episode'].'</td>
                         <td>'.$data['season'].'</td>
                         <td>

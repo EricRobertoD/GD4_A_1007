@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Year Release</label>
-                        <input name="release" type="text" class="form-control" value="<?php echo $data["realese"]; ?>">
+                        <input name="release" type="text" class="form-control" value="<?php echo $data["realease"]; ?>">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Episode</label>
