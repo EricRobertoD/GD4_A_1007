@@ -30,7 +30,6 @@
         $_SESSION['isLogin'] = true; 
         $_SESSION['user'] = $user;
         
-        $_SESSION["user"]
         echo 
         
         '<script>
